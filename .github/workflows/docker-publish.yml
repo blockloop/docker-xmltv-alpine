@@ -1,6 +1,9 @@
 name: Publish Docker image
 
 on:
+  workflow_dispatch: 
+  schedule:
+    - cron: "38 5 * * *"
   push:
     branches: [ "master" ]
     tags: [ 'v*.*.*' ]
